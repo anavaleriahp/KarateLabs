@@ -1,0 +1,58 @@
+# Maven
+target/
+*.jar
+*.war
+*.ear
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+.m2/
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+*.jdi
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# IDE - NetBeans
+nbproject/
+.nb-gradle/
+*.properties
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Node (si se usa para reportes)
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Reportes de Karate
+karate-reports/
+
+# Archivos compilados
+*.class
+*.classpath
+
+# Archivos temporales
+*.tmp
+*.bak
+*~
+
