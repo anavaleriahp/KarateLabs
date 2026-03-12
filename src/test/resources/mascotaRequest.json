@@ -1,0 +1,18 @@
+{
+  "id": "000000123",
+  "category": {
+    "id": 0,
+    "name": "perros"
+  },
+  "name": "Salvador",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}

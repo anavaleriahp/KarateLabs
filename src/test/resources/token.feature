@@ -1,15 +1,16 @@
-Feature: Autenticación
+Feature: Ejecuto token
 
-  Scenario: Configuración inicial y autenticación
-  # Configuramos la URL base de la API y realizamos la autenticación
-    Given url 'https://dummyjson.com'
+  Background: Configuracion
+    * karate.configure('ssl', true);
+    * def baseUrl = 'https://dummyjson.com'
+    * def autenticacion = read('classpath:/autenticacion.json')
+
+    Scenario: Obtener token de autenticacion
+    Given url baseUrl
     And path '/auth/login'
-    * request read('classpath:/authRequest.json')
+    And header Content-Type = 'application/json'
+    And request autenticacion
     When method post
     Then status 200
-    # Imprimimos toda la respuesta para verificar su estructura
-    And print 'response:', response
-    # Guardamos el código retornado por la API en una variable para su uso en los escenarios
-    And def token = response.accessToken.toString()
-    And print 'token:', token
-
+    And def respuesta = response
+    And print 'respuesta:', respuesta
